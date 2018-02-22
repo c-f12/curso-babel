@@ -1,0 +1,63 @@
+@import "../../node_modules/reset-css/reset.css";
+@import "../../node_modules/font-awesome/css/font-awesome.min.css";
+
+*,
+*::before, *::after,*:before,*:after{
+    box-sizing: border-box;
+}
+
+/*
+a - estilos en línea
+b - el nº de ids
+c - atributos (e.g: class, pseudoclases)
+d - elementos (etiquetas que estoy usando, cuantos
+están combinados en la misma línea)
+
+*/
+
+/*
+h1{
+    font-size: 20px;
+    color:plum;
+}
+*/
+h1.enorme{
+    font-size: 4rem;
+}
+
+/* .verde{
+    color: lightgreen;
+} */
+
+p[lang="en"]:hover{
+    color: aquamarine;
+}
+
+p[lang="en"]::first-letter{
+    font-size: 4rem;
+    font-weight: bold;
+}
+
+ul::after{
+    content: 'Aquí empieza una lista';
+}
+
+p:nth-child(2){
+    color: lightsalmon;
+}
+
+body>p:nth-of-type(1){
+    color: blue;
+}
+
+header{
+    font-size: 2rem;
+}
+
+header div{
+    font-size: 50%;
+}
+
+header p{
+    font-size: 50%;
+}

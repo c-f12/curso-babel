@@ -1,0 +1,40 @@
+*,
+*::before, *::after,*:before,*:after{
+    box-sizing: border-box;
+}
+
+.firstgroup{
+    width: 90%;
+    margin: 2rem auto;
+    border: 1px grey solid;
+    /* overflow: hidden; */
+}
+
+div::after{
+    clear: both;
+    content: '';
+    height: 0px;
+    display: block;
+}
+
+.firstgroup p{
+    width: 23.5%;
+    float: left;
+    background-color: salmon;
+    padding: 2rem 1rem; 
+}
+
+.firstgroup p:not(:last-child){
+    margin-right: 2%;
+}
+
+.inline{
+    max-width: 90%;
+    margin: auto;
+}
+
+.inline p{
+    width: 25%;
+    background-color: plum;
+    display: inline-block;
+}
