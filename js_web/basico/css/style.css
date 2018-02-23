@@ -1,0 +1,12 @@
+*, *::before,*:before,*::after,*:after{
+    box-sizing: border-box;
+}
+
+.container{
+    width: 60%;
+    margin: auto;
+}
+
+footer{
+    margin-top: 2rem;
+}
