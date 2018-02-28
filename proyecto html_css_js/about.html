@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Moda sostenible</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="import" href="./templates/header.html" title="header">
+    <link rel="import" href="./templates/footer.html" title="footer">
+    <script src="./js/app.js" type="module"></script>
+</head>
+<body>
+
+    <header></header>
+
+    <main>
+        <div class="wrapper">
+            <section>
+                <h2>Sobre el autor</h2>
+                <article>
+                    <img src="./images/ecoology.png" alt="Clara">
+                    <p class="description">Graduada en Administración y Dirección de Empresas 
+                        y Máster en Desarrollo Web y Diseño Gráfico.</p>
+                </article>
+            </section>
+
+            <section>
+                <h2>Formulario de contacto</h2>
+                <form action="">
+                    <div class="form__group">
+                        <label for="nombre">Nombre</label>
+                        <input type="text" id="nombre" name="nombre">
+                    </div>
+
+                    <div class="form__group">
+                        <label for="apellidos">Apellidos</label>
+                        <input type="text" id="apellidos" name="apellidos">
+                    </div>
+
+                    <div class="form__group">
+                        <label for="marcas">¿Qué marca te gusta más?</label>
+                        <select id="marcas" name="marcas">
+                            <option value="ecoalf">Ecoalf</option>
+                            <option value="ecoology">Ecoology</option>
+                            <option value="equilicua">Equilicua</option>
+                        </select>
+                    </div>
+
+                    <div class="form__group">
+                        <label for="comentarios">Escribe tus sugerencias</label>
+                        <textarea type="text"></textarea>
+                    </div>
+                </form>
+            </section>
+        </div>
+    </main>
+    
+</body>
+</html>

@@ -1,0 +1,245 @@
+@import url('../node_modules/reset-css/reset.css');
+@import url('../node_modules/font-awesome/css/font-awesome.min.css');
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display:700');
+@import url('https://fonts.googleapis.com/css?family=Raleway:400,700');
+
+*,*:after,*::after,*:before,*::before{
+    box-sizing: border-box;
+}
+
+body{
+    font-size: 1rem;
+    font-family: 'Raleway', 'Arial', sans-serif;
+    font-weight: 400;
+    line-height: 1.2;
+    color: black;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+img{
+    width: 100%;
+}
+
+.title{
+    font-family: 'Playfair Display', serif;
+}
+
+nav{
+    width: 100%;
+    border-bottom: 0.1rem solid #eeeeee; 
+    background-color: white;    
+    padding: 1rem 1rem 0 1rem;
+}
+
+.nav-bars-wrapper{
+    position: relative;
+    height: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+nav .nav__bars{
+    float: right;
+    font-size: 1.5rem;
+    position: absolute;
+    right: 0;
+}
+
+nav> ul{
+    text-align: center;
+    display: none;
+    padding-bottom: 1rem;
+}
+
+nav>ul>li:first-child{
+    margin-bottom: 15px;
+}
+
+/*
+nav{
+    width: 100%;
+    height: 5rem;
+    padding-top: 2rem;
+    border-bottom: 0.1rem solid #eeeeee; 
+    background-color: white;
+}
+
+nav> ul{
+    text-align: right;
+    margin-right: 2rem;
+}
+
+nav>ul>li{
+    display: inline-block;
+}
+
+nav>ul>li:first-child{
+    margin-right: 15px;
+}
+*/
+
+.hero-wrapper{
+    max-height: 400px;
+    position: relative;
+    background-color: black;
+    overflow: hidden;
+}
+
+.hero-wrapper .hero__image{
+    opacity: 0.8;
+}
+
+.hero-wrapper .hero__text{
+    position: absolute;
+    top: 150px;
+    margin: 0 2rem;
+    color: white;
+    font-size: 2.5rem;
+}
+
+.hero-wrapper .hero__angle{
+    position: absolute;
+    bottom: 0;
+    color: white;
+    text-align: center;
+    width: 100%;
+    font-size: 2.5rem;
+}
+
+.wrapper{
+    margin: 0 1rem;
+}
+
+section{
+    margin-top: 2rem;
+}
+
+section h2{
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+section h2:after{
+    content: '';
+    display: block;
+    background-color: black;
+    height: 0.2rem;
+    width: 2.5rem;
+    margin: auto;
+    margin-top: 0.5rem;
+}
+
+section .curiosity{
+    color: #03d0b6;
+    font-size: 1rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+section .intro p:last-child{
+    margin-bottom: 0;
+}
+
+section p{
+    margin-bottom: 1rem;
+}
+
+article{
+    overflow: hidden;
+}
+
+article h3{
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    text-transform: uppercase;
+}
+
+article .number{
+    color: #03d0b6;
+    font-size: 3.5rem;
+}
+
+.article-group{
+    margin-bottom: 2rem;
+    background-color: #03d0b6;
+}
+
+.article-content{
+    padding: 1rem;
+    color: white;
+}
+
+.button{
+    margin: auto;
+    display: block;
+    width: 11rem;
+    background-color: white;
+    color: #03d0b6;
+    border: solid #03d0b6 0.1rem;
+    line-height: 2.2rem;
+    text-align: center;
+    font-weight: 700;
+}
+
+.button:hover{
+    border: solid white 0.1rem;
+    background-color: #03d0b6;
+    color: white;
+}
+
+article{
+    position: relative;
+}
+
+.description{
+    margin-top: 1rem;
+    margin-bottom: 0;
+}
+
+form{
+    background-color: #03d0b6;
+    color: white;
+    padding: 1rem;
+}
+
+.form__group:not(:last-child){
+    margin-bottom: 1rem;
+}
+
+label{
+    display: block;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+input, select, textarea{
+    width: 100%;
+    outline: 0 none;
+    border: 0 none;
+}
+
+select{
+    background-color: white;
+}
+
+input[type="text"]{
+    background-color: transparent;
+    border-bottom: 0.1rem white solid;
+}
+
+textarea{
+    height: 5rem;
+    resize: none;
+}
+
+footer p{
+    font-size: 0.8rem;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
