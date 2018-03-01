@@ -9,6 +9,7 @@
     <link rel="import" href="./templates/header.html" title="header">
     <link rel="import" href="./templates/footer.html" title="footer">
     <script src="./js/app.js" type="module"></script>
+    <script src="./js/form.js"></script>
 </head>
 <body>
 
@@ -16,26 +17,25 @@
 
     <main>
         <div class="wrapper">
-            <section>
+            <section class="about">
                 <h2>Sobre el autor</h2>
-                <article>
-                    <img src="./images/ecoology.png" alt="Clara">
-                    <p class="description">Graduada en Administración y Dirección de Empresas 
-                        y Máster en Desarrollo Web y Diseño Gráfico.</p>
-                </article>
+                <img src="./images/ecoology.png" alt="Clara">
+                <p class="description">Graduada en Administración y Dirección de Empresas 
+                    y Máster en Desarrollo Web y Diseño Gráfico.</p>
             </section>
 
-            <section>
+            <section class="form">
                 <h2>Formulario de contacto</h2>
-                <form action="">
+                <form id="form" method="post">
                     <div class="form__group">
                         <label for="nombre">Nombre</label>
-                        <input type="text" id="nombre" name="nombre">
+                        <input type="text" id="nombre" name="nombre" required>
+                        <p></p>
                     </div>
 
                     <div class="form__group">
-                        <label for="apellidos">Apellidos</label>
-                        <input type="text" id="apellidos" name="apellidos">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
                     </div>
 
                     <div class="form__group">
@@ -49,12 +49,18 @@
 
                     <div class="form__group">
                         <label for="comentarios">Escribe tus sugerencias</label>
-                        <textarea type="text"></textarea>
+                        <textarea id="comentarios" name="comentarios"></textarea>
                     </div>
+
+                    <input class="button" id="submit" type="submit" value="Enviar">
                 </form>
+
+                <div id="result-form" class="oculto result-form">
+                    <ul id="result-list" class="result-list"></ul>
+                </div>
             </section>
         </div>
     </main>
-    
+    <footer></footer>
 </body>
 </html>
