@@ -83,15 +83,6 @@ nav>ul>li:first-child{
     font-size: 2.5rem;
 }
 
-.hero-wrapper .hero__angle{
-    position: absolute;
-    bottom: 0;
-    color: white;
-    text-align: center;
-    width: 100%;
-    font-size: 2.5rem;
-}
-
 .wrapper{
     margin: 0 1rem 3rem 1rem;
     overflow: hidden;
@@ -115,6 +106,10 @@ section h2:after{
     width: 2.5rem;
     margin: auto;
     margin-top: 0.5rem;
+}
+
+section article{
+    margin-bottom: 1.5rem;
 }
 
 section .curiosity{
@@ -210,6 +205,7 @@ input, select, textarea{
     width: 100%;
     outline: 0 none;
     border: 0 none;
+    font-size: 1rem;
 }
 
 select{

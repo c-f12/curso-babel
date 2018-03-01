@@ -6,50 +6,51 @@ export class Main{
             imports: document.querySelectorAll('link[rel="import"]'),
             oImports : {},
         }
-        
+
         this.vista.imports.forEach((elem) => {
             this.vista.oImports[elem.title]=elem.import;
         })
-
-        //console.log(this.vista.oImports);
-        //const tag = this.vista.oImports[elem.title];
-        //console.log(tag.getElementsByTagName('template').getAttribute('id') );
+        
 /*
         this.nav = {
             navBars: this.vista.oImports['header'].querySelector(`#${'header'}`).content.querySelector('#nav-bars'),
             menuList: this.vista.oImports['header'].querySelector(`#${'header'}`).content.querySelector('#menu-list'),
         }
 */
-        
-        this.loadHeader('header');
-        this.loadFooter('footer');
+        let id;
+        Object.keys(this.vista.oImports).forEach((elem) => {
+            id = elem;
+            this.loadTemplate(id);
+        });
     }
 
     showMenu(){
         const menuList = document.querySelector('#menu-list');
+        const navBars = document.querySelector('#nav-bars');
+
         if(menuList.style.display == 'block'){
             menuList.style.display = 'none';
+            navBars.classList.add('fa-bars');
+            navBars.classList.remove('fa-times');
         } 
         else {
             menuList.style.display = 'block';
+            navBars.classList.remove('fa-bars');
+            navBars.classList.add('fa-times');
         }
     }
 
-    loadHeader(id){
-        const header = this.vista.oImports[id];
-        const nav = header.querySelector(`#${id}`);
-        this.vista.header.innerHTML = nav.innerHTML;
-        
-        //get navBars from document to show/hide menu:
-        const navBars = document.querySelector('#nav-bars');
-        navBars.addEventListener('click',this.showMenu.bind(this),false);
-    }
+    loadTemplate(id){
+        const contentTemplate = this.vista.oImports[id];
+        const getIdTemplate = contentTemplate.querySelector('#'+ id);
 
-    loadFooter(id){
-        const footer = this.vista.oImports[id];
-        const footerInfo = footer.querySelector(`#${id}`);
-        this.vista.footer.innerHTML = footerInfo.innerHTML;
+        if(id === 'header'){
+            this.vista.header.innerHTML = getIdTemplate.innerHTML;
+            let navBars = document.querySelector('#nav-bars');
+            navBars.addEventListener('click',this.showMenu.bind(this),false);
+        }
+        if(id === 'footer'){
+            this.vista.footer.innerHTML = getIdTemplate.innerHTML;
+        }
     }
-
-   
 }
