@@ -49,8 +49,11 @@ nav{
     margin-bottom: 1rem;
 }
 
+.logo{
+    width: 2rem;
+}
+
 nav .nav__bars{
-    float: right;
     font-size: 1.5rem;
     position: absolute;
     right: 0;
@@ -68,7 +71,6 @@ nav>ul>li:first-child{
 
 .hero-wrapper{
     height: 400px;
-    position: relative;
     background-color: black;
     overflow: hidden;
     background-image: url('../images/hero.jpg');
@@ -78,18 +80,24 @@ nav>ul>li:first-child{
 }
 
 .hero-wrapper .hero__text{
-    margin: 4rem 2rem 0 2rem;
+    margin: 0 2rem;
     color: white;
     font-size: 2.5rem;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
 }
 
 .wrapper{
     margin: 0 1rem 3rem 1rem;
+}
+
+.wrapper, section, article {
     overflow: hidden;
 }
 
 section{
-    margin-top: 2rem;
+    margin-top: 2.5rem;
 }
 
 section h2{
@@ -108,7 +116,7 @@ section h2:after{
     margin-top: 0.5rem;
 }
 
-section article{
+.brands article{
     margin-bottom: 1.5rem;
 }
 
@@ -117,7 +125,6 @@ section .curiosity{
     font-size: 1rem;
     font-weight: 700;
     margin-bottom: 0.5rem;
-    text-transform: none;
 }
 
 section .intro p:last-child{
@@ -126,10 +133,6 @@ section .intro p:last-child{
 
 section p{
     margin-bottom: 1rem;
-}
-
-section, article{
-    overflow: hidden;
 }
 
 article h3{
@@ -175,8 +178,10 @@ article .number{
     color: white;
 }
 
-article{
-    position: relative;
+.img-autor{
+    width: 70%;
+    display: block;
+    margin: auto;
 }
 
 .description{
@@ -253,8 +258,11 @@ footer p{
     }
 
     .hero-wrapper .hero__text{
-        margin: 12rem auto 0 auto;
+        margin: auto;
         max-width: 28rem;
+        position: relative;
+        top: 50%;
+        transform: translateY(-50%);
     }
 
     nav, footer{
@@ -289,13 +297,13 @@ footer p{
         margin: auto;
         margin-bottom: 3rem;
     }
-
 }
 
 @media screen and (min-width: 1024px){
 
     nav{
         text-align: right;
+        overflow: hidden;
     }
 
     nav ul, nav ul li{
@@ -308,13 +316,16 @@ footer p{
     }
 
     .nav-bars-wrapper{
+        float: left;
+    }
+
+    .nav__bars{
         display: none;
     }
 
     .hero-wrapper .hero__text{
         font-size: 3.5rem;
-        margin: 6rem auto 0 auto;
-        max-width: 30rem;
+        max-width: 35rem;
     }
 
     .wrapper{
@@ -323,5 +334,9 @@ footer p{
 
     .article-content{
         padding: 2rem;
+    }
+
+    .article-content p{
+        margin-bottom: 2rem;
     }
 }

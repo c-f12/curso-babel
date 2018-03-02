@@ -7,21 +7,28 @@ export class Main{
             oImports : {},
         }
 
+        console.log(this.vista.header)
+        console.log(this.vista.imports)
+
         this.vista.imports.forEach((elem) => {
             this.vista.oImports[elem.title]=elem.import;
-        })
-        
-/*
-        this.nav = {
-            navBars: this.vista.oImports['header'].querySelector(`#${'header'}`).content.querySelector('#nav-bars'),
-            menuList: this.vista.oImports['header'].querySelector(`#${'header'}`).content.querySelector('#menu-list'),
-        }
-*/
-        let id;
-        Object.keys(this.vista.oImports).forEach((elem) => {
-            id = elem;
-            this.loadTemplate(id);
         });
+
+        console.log(this.vista.oImports);
+
+        Object.keys(this.vista.oImports).forEach((elem) => {
+            console.log(elem)
+            this.loadTemplate(elem);
+        });
+        
+        console.log(this.vista.oImports);
+/*
+    this.nav = {
+        navBars: this.vista.oImports['header'].querySelector(`#${'header'}`).content.querySelector('#nav-bars'),
+        menuList: this.vista.oImports['header'].querySelector(`#${'header'}`).content.querySelector('#menu-list'),
+    }
+*/
+
     }
 
     showMenu(){
@@ -41,8 +48,11 @@ export class Main{
     }
 
     loadTemplate(id){
+        console.log('loadedtemplate')
         const contentTemplate = this.vista.oImports[id];
-        const getIdTemplate = contentTemplate.querySelector('#'+ id);
+        console.log(contentTemplate)
+        const getIdTemplate = contentTemplate.querySelector(`#${id}`);
+        console.log(getIdTemplate)
 
         if(id === 'header'){
             this.vista.header.innerHTML = getIdTemplate.innerHTML;
